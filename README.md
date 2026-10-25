@@ -27,9 +27,16 @@ Bitrate neu kodiert. ffmpeg ist bereits eingebaut – es muss nichts installiert
 
 ## 2 · Starten
 
-- **macOS:** die `7aMergeCast.app` bzw. die `.dmg` öffnen. Beim ersten Start
-  erscheint evtl. eine Gatekeeper-Warnung (unsignierte App) – dann **Rechtsklick**
-  auf die App → **„Öffnen"** → im Dialog nochmal **„Öffnen"**. Danach startet sie normal.
+- **macOS:** `.dmg` öffnen und `7aMergeCast.app` nach **Programme** ziehen.
+  - Meldung **„… ist beschädigt und kann nicht geöffnet werden"**? Das ist nur das
+    Download-Quarantäne-Flag der unsignierten App (nicht wirklich beschädigt). Einmal
+    im **Terminal** ausführen (Pfad anpassen):
+    ```bash
+    xattr -dr com.apple.quarantine "/Applications/7aMergeCast.app"
+    ```
+    Danach normal per Doppelklick öffnen.
+  - Erscheint stattdessen nur „unbekannter Entwickler": **Rechtsklick** auf die App →
+    **„Öffnen"** → nochmal **„Öffnen"**.
 - **Windows:** bei der SmartScreen-Meldung **„Weitere Informationen"** → **„Trotzdem ausführen"**.
 - Unterstützte Eingabeformate: **.mp4, .mov, .mxf**.
 
@@ -89,8 +96,10 @@ Beide Optionen sind abschaltbar und werden gemerkt. Sie verlängern die Verarbei
 - **Defekte Clips** werden automatisch übersprungen und am Ende als „übersprungen" gemeldet.
 - **10-Bit-Material** (z. B. HEVC Main 10) wird automatisch auf 8-Bit gewandelt,
   damit das Ergebnis überall abspielbar ist.
-- **Gatekeeper / „unbekannter Herausgeber":** die App ist nicht signiert – beim ersten
-  Start über Rechtsklick → „Öffnen" (macOS) bzw. „Trotzdem ausführen" (Windows) freigeben.
+- **macOS „… ist beschädigt":** nicht wirklich beschädigt, nur das Download-Quarantäne-Flag
+  der unsignierten App. Fix: `xattr -dr com.apple.quarantine "/Applications/7aMergeCast.app"`
+  (Pfad anpassen), dann öffnen. Bei „unbekannter Entwickler" genügt Rechtsklick → „Öffnen".
+- **Windows „unbekannter Herausgeber":** SmartScreen → „Weitere Informationen" → „Trotzdem ausführen".
 - **Verarbeitung wirkt eingefroren?** Auf Windows nicht ins Konsolenfenster klicken
   (QuickEdit-Modus pausiert Prozesse) – einmal **Esc** drücken.
 
