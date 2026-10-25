@@ -79,6 +79,8 @@ Beide Optionen sind abschaltbar und werden gemerkt. Sie verlängern die Verarbei
 - **Video stabilisieren:** glättet verwackelte Aufnahmen. Windows: **vidstab**
   (Zwei-Pass, genauer); macOS: **deshake** (Ein-Pass). Das Bild wird dabei leicht
   hineingezoomt (minimaler Randbeschnitt).
+  **Achtung:** macht den Export rund **2–3× langsamer** – daher behutsam und nur
+  gezielt einsetzen (bei wirklich wackligem Material).
 
 ## 6 · Zusammenfügen und Fortschritt
 
