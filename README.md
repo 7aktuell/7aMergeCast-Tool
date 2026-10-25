@@ -38,7 +38,7 @@ Bitrate neu kodiert. ffmpeg ist bereits eingebaut – es muss nichts installiert
   - Erscheint stattdessen nur „unbekannter Entwickler": **Rechtsklick** auf die App →
     **„Öffnen"** → nochmal **„Öffnen"**.
 - **Windows:** bei der SmartScreen-Meldung **„Weitere Informationen"** → **„Trotzdem ausführen"**.
-- Unterstützte Eingabeformate: **.mp4, .mov, .mxf**.
+- Unterstützte Eingabeformate: **.mp4, .mov, .mxf, .mts, .m2ts, .mpg, .mpeg, .hevc**.
 
 ## 3 · Clips hinzufügen und ordnen
 
