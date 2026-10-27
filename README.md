@@ -39,7 +39,7 @@ Dazu kommt, was man im Alltag rund um das Material braucht – alles lokal auf d
 ## 3 · Clips hinzufügen und ordnen
 
 - Hinzufügen: Dateien oder ganze Ordner ins Fenster ziehen (Ordner werden rekursiv nach Videos durchsucht) – oder über den Button „Clips hinzufügen…“.
-- Reihenfolge: Clips werden beim Hinzufügen natürlich sortiert (datei_2 kommt vor datei_10). Per Drag lassen sie sich frei umsortieren; „Natürlich sortieren“ stellt die Namenssortierung wieder her.
+- Reihenfolge: Clips werden beim Hinzufügen natürlich sortiert (datei\_2 kommt vor datei\_10). Per Drag lassen sie sich frei umsortieren; „Natürlich sortieren“ stellt die Namenssortierung wieder her.
 - „+ Hinzufügen“ über der Liste nimmt weitere Clips dazu; „Alle entfernen“ leert die Liste (die Dateien selbst bleiben unberührt).
 - Jeder Clip zeigt ein Vorschaubild, Dauer, Aufnahmedatum/-zeit und – wenn vorhanden – die Kamera aus den Metadaten. Defekte/unlesbare Clips werden erkannt und beim Zusammenfügen übersprungen (mit Hinweis).
 
@@ -51,7 +51,7 @@ Ein Klick auf einen Clip zeigt ihn rechts in der Vorschau. So triffst du schnell
 - Abspielen: „Abspielen“ (oder Doppelklick auf den Clip) spielt ab dem gerade gezeigten Bild ab – mit Ton. Für Formate, die die Vorschau nicht direkt kann (z. B. MXF, MTS), wird einmalig eine kleine Vorschaudatei erzeugt.
 - Häkchen vorne in der Clip-Liste („Im Export“, Taste X): abgewählte Clips bleiben in der Liste (abgedunkelt), kommen aber nicht ins Endmaterial. Größe, Länge und Uploadzeit rechnen nur mit den ausgewählten Clips.
 - Tastatur: ↑/↓ Clip wechseln · Leertaste Abspielen/Pause · X ins Export ein/aus · G Gesichter verpixeln · K Kennzeichen verpixeln.
-- Einzel-Fix (Knopf in der Vorschau): verarbeitet nur den gewählten Clip separat und normalisiert dessen erste Video- und Tonspur – hilfreich bei problematischen Dateien (z. B. Sony-XAVC mit zusätzlichem Metadaten-Stream). Ergebnis: &lt;name&gt;_fix.mp4.
+- Einzel-Fix (Knopf in der Vorschau): verarbeitet nur den gewählten Clip separat und normalisiert dessen erste Video- und Tonspur – hilfreich bei problematischen Dateien (z. B. Sony-XAVC mit zusätzlichem Metadaten-Stream). Ergebnis: &lt;name&gt;\_fix.mp4.
 
 ## 4 · Export-Einstellungen
 
@@ -61,7 +61,7 @@ Ein Klick auf einen Clip zeigt ihn rechts in der Vorschau. So triffst du schnell
 
 ### Dateiname
 
-Format JJJJMMTT_&lt;Freitext&gt;_&lt;Laufzeit&gt;.mp4, z. B. 20261026_HagelunwetterRT_3min50.mp4. Datum ist heute, die Laufzeit (Minuten/Sekunden der fertigen Datei) wird automatisch ermittelt. Der Freitext wird automatisch gesäubert: Leerzeichen werden zu „_“, Umlaute umgeschrieben (ä→ae …), Sonderzeichen entfernt. Die Live-Vorschau zeigt den fertigen Namen.
+Format JJJJMMTT\_&lt;Freitext&gt;\_&lt;Laufzeit&gt;.mp4, z. B. 20261026\_HagelunwetterRT\_3min50.mp4. Datum ist heute, die Laufzeit (Minuten/Sekunden der fertigen Datei) wird automatisch ermittelt. Der Freitext wird automatisch gesäubert: Leerzeichen werden zu „\_“, Umlaute umgeschrieben (ä→ae …), Sonderzeichen entfernt. Die Live-Vorschau zeigt den fertigen Namen.
 
 ### Ausgabeordner
 
