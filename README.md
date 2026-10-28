@@ -82,6 +82,16 @@ Reduziert Störgeräusche – Wind, Hintergrund, Rauschen – mit dem neuronalen
 
 - Das Audio wird dafür auf Mono / 48 kHz verarbeitet (sprachoptimiert).
 - Läuft vollständig offline auf dem Gerät – nichts wird hochgeladen.
+- Stärke: Leicht, Mittel, Stark oder Voll (Standard). Bei „Voll“ wird das Rauschen so weit wie möglich entfernt; die Stimme kann dann etwas künstlich klingen. Die schwächeren Stufen lassen bewusst etwas Umgebung stehen und klingen natürlicher. Die Stärke gilt für alle Clips des Exports und wird gemerkt.
+
+### Entrauschen vorher anhören
+
+In der Vorschau steht unter dem Clip die Zeile „Entrauschen“. So findest du die passende Stärke:
+
+- Stelle im Clip wählen (Filmstreifen oder Wiedergabe) und „Probe hören“ klicken: Die App entrauscht 10 Sekunden ab dieser Stelle genau so wie später im Export und spielt sie ab – bei MP4/MOV mit dem Bild dazu.
+- Während der Probe mit „Original / Entrauscht“ hin- und herschalten. Beide Fassungen sind gleich laut gemacht, damit man nur den Unterschied im Rauschen hört.
+- Eine andere Stärke anklicken, während die Probe läuft: Es geht an derselben Stelle mit der neuen Stärke weiter. Schon gehörte Proben werden gemerkt und starten sofort.
+- Ist „Audio verbessern“ ausgeschaltet, sagt die Zeile das und bietet „einschalten“ an – sonst wird beim Export gar nicht entrauscht.
 
 ### Video stabilisieren
 
@@ -91,6 +101,13 @@ Glättet verwackelte Handaufnahmen.
 - macOS: deshake (Ein-Pass, eingebaut).
 - Das Bild wird dabei leicht hineingezoomt (minimaler Randbeschnitt).
 - Achtung: Die Stabilisierung macht den Export etwa 2–3× langsamer als ohne – daher behutsam und nur gezielt einsetzen (bei wirklich wackligem Material).
+
+### Grafikkarte oder Prozessor
+
+Zum Kodieren nutzt 7aMergeCast automatisch die Grafikkarte, wenn sie das kann – das ist um ein Vielfaches schneller als der Prozessor. Beim Start prüft die App kurz, was auf dem Rechner funktioniert: unter Windows NVIDIA, Intel-Grafik oder AMD, auf dem Mac der eingebaute Grafikchip. Neben dem Schalter „Nur Prozessor kodieren“ steht, was erkannt wurde.
+
+- Klappt es mit der Grafikkarte mitten im Export nicht (z. B. Treiberproblem), kodiert die App automatisch noch einmal mit dem Prozessor und sagt das am Ende an.
+- „Nur Prozessor kodieren“ ist nur nötig, wenn die Grafikkarte sichtbar schlechte oder fehlerhafte Bilder liefert. Der Export dauert dann deutlich länger.
 
 ### Gesichter / Kennzeichen verpixeln (pro Clip)
 
@@ -168,7 +185,7 @@ Für einzelne Clips lassen sich Gesichter und/oder Kfz-Kennzeichen automatisch u
 
 ## 9 · Kurz zur Technik
 
-7aMergeCast ist eine schlanke Tauri-App (Rust-Kern, Web-Oberfläche). ffmpeg/ffprobe und DeepFilterNet sind als mitgelieferte Programme eingebunden und laufen lokal. Kodiert wird plattformabhängig: macOS nutzt die Hardwarebeschleunigung VideoToolbox, Windows den Software-Encoder libx264. Das Zusammenfügen erfolgt über den ffmpeg-concat-Demuxer mit Neukodierung auf die gewählte Zielbitrate. Die O-Ton-Erkennung nutzt whisper.cpp (OpenAI Whisper, large-v3-turbo) mit Grafikbeschleunigung (Mac: Metal, Windows: Vulkan) und Silero VAD für die Sprechpausen.
+7aMergeCast ist eine schlanke Tauri-App (Rust-Kern, Web-Oberfläche). ffmpeg/ffprobe und DeepFilterNet sind als mitgelieferte Programme eingebunden und laufen lokal. Kodiert wird mit der Grafikkarte, wo möglich: macOS nutzt VideoToolbox, Windows je nach Rechner NVIDIA NVENC, Intel Quick Sync oder AMD AMF – sonst den Software-Encoder libx264. Das Zusammenfügen erfolgt über den ffmpeg-concat-Demuxer mit Neukodierung auf die gewählte Zielbitrate. Die O-Ton-Erkennung nutzt whisper.cpp (OpenAI Whisper, large-v3-turbo) mit Grafikbeschleunigung (Mac: Metal, Windows: Vulkan) und Silero VAD für die Sprechpausen.
 
 ### Internet-Zugriffe
 
