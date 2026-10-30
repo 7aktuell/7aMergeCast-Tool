@@ -7,7 +7,7 @@ automatischem Verpixeln von Gesichtern und Kennzeichen und lokaler O-Ton-Transkr
 ## Download
 
 Neueste Version: **[Releases → latest](https://github.com/7aktuell/7aMergeCast-Tool/releases/latest)**
-(dieses Handbuch beschreibt Version 0.4.0)
+(dieses Handbuch beschreibt Version 0.4.1)
 
 - **macOS** (Apple Silicon): `7aMergeCast_*_aarch64.dmg`
 - **Windows** (64-bit): `7aMergeCast_*_x64-setup.exe`
